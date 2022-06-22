@@ -20,6 +20,7 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import Dashnoard from './pages/Dashboard/Dashnoard';
 import Search from './pages/Search/Search';
 import Post from './pages/Post/Post';
+import EditPost from './pages/EditPost/EditPost';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/" />} />
               <Route path='/posts/create' element={user ? <CreatePost/> : <Navigate to="/login" />}/>
               <Route path='/dashboard' element={user ? <Dashnoard/> : <Navigate to="/login" /> }/>
+              <Route path='/posts/edit/:id' element={user ? <EditPost/> : <Navigate to="/login" /> }/>
             </Routes>
           </div>
         <Footer />
