@@ -9,9 +9,10 @@ import { useDeleteDocument } from "../../hooks/useDeleteDocument";
 
 const Dashnoard = () => {
   const {user} = useAuthValue();
-  const uid = user.id;
+  const uid = user.uid;
 
-  const {documents : posts, loading} = useFetchDocuments("posts", uid);
+
+  const {documents : posts, loading} = useFetchDocuments("posts",null, uid);
   
   const {deleteDocument} = useDeleteDocument("posts")
 
